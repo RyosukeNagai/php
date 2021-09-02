@@ -181,5 +181,36 @@ function sumPrice($int1, $int2) {
 $total = sumPrice(3,5);
 echo $total;
 
+echo '<br>';
 //組み込み関数
+//文字列の長さ
+$text = 'abc';
+echo strlen($text);
+
+echo '<br>';
+//文字列の置換
+$str = '文字列を置換します';
+echo str_replace('置換','ちかん',$str);
+
+echo '<br>';
+//指定文字列で分割
+$str_2 = '指定文字列で、分割します';
+echo '<pre>';
+var_dump(explode('、', $str_2));
+echo '</pre>';
+
+echo '<br>';
+//正規表現
+//文字、数字、郵便番号、メールアドレスかどうか確認。
+$str_3 = '特定の文字列が含まれるか確認する';
+
+echo preg_match('/文字列/',$str_3);
+
+echo '<br>';
+//配列に配列を追加する
+$arry = ['リンゴ','みかん'];
+
+array_push($arry,'ぶどう','なし');
+var_dump($arry);
+
 ?>
